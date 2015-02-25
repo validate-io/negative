@@ -1,4 +1,4 @@
-negative
+Negative
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,34 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-negative' );
+var isNegative = require( 'validate.io-negative' );
 ```
 
-#### foo( value )
+#### isNegative( value )
 
-What does this function do?
+Validates if a `value` is a negative `number`.
+
+``` javascript
+var value = -Math.PI;
+
+var bool = isNegative( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-negative' );
+var isNegative = require( 'validate.io-negative' );
+
+console.log( isNegative( -Math.PI ) );
+// returns true
+
+console.log( isNegative( 0 ) );
+// returns false
+
+console.log( isNegative( 1 ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
